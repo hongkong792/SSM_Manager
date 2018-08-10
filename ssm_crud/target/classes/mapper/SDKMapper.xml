@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.crud.dao.SDKMapper">
+    <resultMap id="BaseResultMap" type="com.atguigu.crud.bean.SDKModel">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="version" jdbcType="INTEGER" property="version" />
+        <result column="timeStamp" jdbcType="VARCHAR" property="timeStamp" />
+        <result column="downCount" jdbcType="INTEGER" property="downCount" />
+        <result column="desc" jdbcType="VARCHAR" property="desc" />
+
+    </resultMap>
+
+
+    <!--select表示查询,它的id名称必须与DAO层接口的方法名相同,否则无法绑定-->
+    <select id="selectSDKs"  resultMap="BaseResultMap">
+        select * from tbl_sdk
+    </select>
+
+
+
+
+</mapper>
